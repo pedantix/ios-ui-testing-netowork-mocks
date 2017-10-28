@@ -14,6 +14,11 @@
 		EF24E1241FA51CBF00642C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF24E1221FA51CBF00642C7C /* LaunchScreen.storyboard */; };
 		EF24E12F1FA51CBF00642C7C /* TestingMockedNetworkResponsesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24E12E1FA51CBF00642C7C /* TestingMockedNetworkResponsesTests.swift */; };
 		EF24E13A1FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24E1391FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests.swift */; };
+		EF24E1481FA51E5000642C7C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24E1471FA51E5000642C7C /* Configuration.swift */; };
+		EF24E14A1FA5200300642C7C /* Ip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24E1491FA5200300642C7C /* Ip.swift */; };
+		EF24E14C1FA522AD00642C7C /* UITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24E14B1FA522AD00642C7C /* UITestBase.swift */; };
+		EF24E1501FA5267100642C7C /* Embassy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF24E14F1FA5267100642C7C /* Embassy.framework */; };
+		EF24E1521FA5267C00642C7C /* Ambassador.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF24E1511FA5267C00642C7C /* Ambassador.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		EF24E1351FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingMockedNetworkResponsesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF24E1391FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingMockedNetworkResponsesUITests.swift; sourceTree = "<group>"; };
 		EF24E13B1FA51CBF00642C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF24E1471FA51E5000642C7C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		EF24E1491FA5200300642C7C /* Ip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ip.swift; sourceTree = "<group>"; };
+		EF24E14B1FA522AD00642C7C /* UITestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestBase.swift; sourceTree = "<group>"; };
+		EF24E14F1FA5267100642C7C /* Embassy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Embassy.framework; path = Carthage/Build/iOS/Embassy.framework; sourceTree = "<group>"; };
+		EF24E1511FA5267C00642C7C /* Ambassador.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ambassador.framework; path = Carthage/Build/iOS/Ambassador.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF24E1521FA5267C00642C7C /* Ambassador.framework in Frameworks */,
+				EF24E1501FA5267100642C7C /* Embassy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,7 @@
 				EF24E12D1FA51CBF00642C7C /* TestingMockedNetworkResponsesTests */,
 				EF24E1381FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests */,
 				EF24E1171FA51CBF00642C7C /* Products */,
+				EF24E14E1FA5267100642C7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +112,12 @@
 			children = (
 				EF24E1191FA51CBF00642C7C /* AppDelegate.swift */,
 				EF24E11B1FA51CBF00642C7C /* ViewController.swift */,
+				EF24E1471FA51E5000642C7C /* Configuration.swift */,
 				EF24E11D1FA51CBF00642C7C /* Main.storyboard */,
 				EF24E1201FA51CBF00642C7C /* Assets.xcassets */,
 				EF24E1221FA51CBF00642C7C /* LaunchScreen.storyboard */,
 				EF24E1251FA51CBF00642C7C /* Info.plist */,
+				EF24E1491FA5200300642C7C /* Ip.swift */,
 			);
 			path = TestingMockedNetworkResponses;
 			sourceTree = "<group>";
@@ -121,8 +136,18 @@
 			children = (
 				EF24E1391FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests.swift */,
 				EF24E13B1FA51CBF00642C7C /* Info.plist */,
+				EF24E14B1FA522AD00642C7C /* UITestBase.swift */,
 			);
 			path = TestingMockedNetworkResponsesUITests;
+			sourceTree = "<group>";
+		};
+		EF24E14E1FA5267100642C7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF24E1511FA5267C00642C7C /* Ambassador.framework */,
+				EF24E14F1FA5267100642C7C /* Embassy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +195,7 @@
 				EF24E1311FA51CBF00642C7C /* Sources */,
 				EF24E1321FA51CBF00642C7C /* Frameworks */,
 				EF24E1331FA51CBF00642C7C /* Resources */,
+				EF24E14D1FA525F500642C7C /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -254,11 +280,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EF24E14D1FA525F500642C7C /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Embassy.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Ambassador.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF24E1121FA51CBF00642C7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF24E14A1FA5200300642C7C /* Ip.swift in Sources */,
+				EF24E1481FA51E5000642C7C /* Configuration.swift in Sources */,
 				EF24E11C1FA51CBF00642C7C /* ViewController.swift in Sources */,
 				EF24E11A1FA51CBF00642C7C /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF24E14C1FA522AD00642C7C /* UITestBase.swift in Sources */,
 				EF24E13A1FA51CBF00642C7C /* TestingMockedNetworkResponsesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +540,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TestingMockedNetworkResponsesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shauncodes.TestingMockedNetworkResponsesUITests;
@@ -508,6 +560,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TestingMockedNetworkResponsesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shauncodes.TestingMockedNetworkResponsesUITests;

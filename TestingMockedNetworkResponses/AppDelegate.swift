@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+
+    #if DEBUG
+      let environment = ProcessInfo.processInfo.environment
+
+      if let fakeUrl = environment["ENVOY_BASEURL"] {
+        Configuration.shared.apiUrl = fakeUrl
+      }
+    #endif
+
     return true
   }
 
